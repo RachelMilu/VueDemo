@@ -1,0 +1,27 @@
+{
+    "result":{
+        "topic":"下午酸奶口味选择",
+        "question":"",
+        "options":[
+            {
+                "id":0,
+                "option":"草莓"
+            },
+            {
+                "id":1,
+                "option":"芦荟"
+            },
+            {
+                "id":2,
+                "option":"原味"
+            }
+        ],
+        "validstart":987989898989,
+        "validend":987989898989,
+        "isOpen":true
+    },
+    "status":{
+        "code":0,
+        "msg":"success"
+    }
+}
