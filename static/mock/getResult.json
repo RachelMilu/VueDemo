@@ -1,0 +1,35 @@
+{
+    "result":{
+        "topic":"下午酸奶口味选择",
+        "question":"大家要喝啥？",
+        "questionId":"12",
+        "total":11,
+        "options":[
+            {
+                "id":0,
+                "option":"草莓",
+                "count": 1,
+                "voterList":["1"]
+            },
+            {
+                "id":1,
+                "option":"芦荟",
+                "count": 3,
+                "voterList":["4","2","3"]
+            },
+            {
+                "id":2,
+                "option":"原味",
+                "count": 2,
+                "voterList":["5","6"]
+            }
+        ],
+        "validstart":1461032044563,
+        "validend":1468832044563,
+        "isOpen":true
+    },
+    "status":{
+        "code":0,
+        "msg":"success"
+    }
+}
