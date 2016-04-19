@@ -12,13 +12,15 @@
           </label>
         </li>
       </ul>
-      <a class="link" v-link="{name: 'result'}">跳转到result</a>
+      <!--<a class="link" v-link="{name: 'result'}">跳转到result</a>-->
+      <button v-on:click="voteSubmit">提交</button>
+
     </div>
 
     <div v-else="code" id="vote">
       <h1>{{ title }}</h1>
       <input palceholder="请输入你的邀请码" v-model="codeinput" v-on:keyup.enter="formatCheck"/>
-      <button v-on:click="reverseMessage">提交</button>
+      <button v-on:click="codeSubmit">提交</button>
     </div>
 
     <div>
@@ -28,6 +30,8 @@
 </template>
 
 <script>
+  import Store from '../vuex/store'
+
   export default {
 
     data: function () {
@@ -68,13 +72,6 @@
     },
 
     methods: {
-      reverseMessage: function () {
-        if(this.codeinput.length > 6){
-          this.code = this.codeinput;
-        }else{
-          alert('请输入正确的邀请码~')
-        }
-      },
 
       formatCheck: function () {
         console.log(this.codeinput)
@@ -97,7 +94,23 @@
         } else {
           return ""
         }
+      },
+
+      codeSubmit: function () {
+        if(this.codeinput.length > 6){
+          this.code = this.codeinput;
+        }else{
+          alert('请输入正确的邀请码~')
+        }
+      },
+
+      voteSubmit: function(){
+        Store.dispatch('setterUrl',"99999")
+        console.log(this)
+        this.$router.go({name:'share'})
+
       }
+
     }
   }
 </script>

@@ -10,7 +10,10 @@
   import Home from './components/Home'
   import Result from './components/Result'
   import CreateVote from './components/CreateVote'
+
+
   export default {
+
     components: {Home}
 
   }
