@@ -30,9 +30,19 @@
 </template>
 
 <script>
-  import Store from '../vuex/store'
+  import Result from '../vuex/modules/result'
+  import { setterUrl } from '../vuex/actions'
 
   export default {
+
+    vuex: {
+      getters:{
+        url: state => state.url
+      },
+      actions: {
+        setterUrl
+      }
+    },
 
     data: function () {
       return {
@@ -105,8 +115,8 @@
       },
 
       voteSubmit: function(){
-        Store.dispatch('setterUrl',"99999")
-        console.log(this)
+//        Store.dispatch('setterUrl',"99999")
+        this.setterUrl('8888888')
         this.$router.go({name:'share'})
 
       }
@@ -120,4 +130,5 @@
   h1 {
     color: #42b983;
   }
+
 </style>

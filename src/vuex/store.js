@@ -1,29 +1,23 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import createLogger from 'vuex/logger'
+import middlewares from './middlewares'
+
+import result from './modules/result'
+import share from  './modules/share'
+
 
 Vue.use(Vuex)
 
-const state = {
-  url: ''
-}
+const debug = process.env.NODE_ENV !== 'production'
+Vue.config.debug = debug
+Vue.config.warnExpressionErrors = false
 
-const mutations = {
-  setterUrl: function (state,str) {
-    state.url = location.origin + "?code=" + str
-  },
-  getterUrl: function (state) {
-    return state.url
-  }
-}
-
-
-Vue.config.debug = true
-const debug = process.env.NODE_ENV != 'production'
 
 export default new Vuex.Store({
-  state,
-  mutations,
-  strict:debug,
-  moddlewares: debug ? [createLogger()] : []
+  modules: {
+    result,
+    share
+  },
+  middlewares,
+  strict:debug
 })

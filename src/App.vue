@@ -10,10 +10,11 @@
   import Home from './components/Home'
   import Result from './components/Result'
   import CreateVote from './components/CreateVote'
+  import store from './vuex/store'
 
 
   export default {
-
+    store,
     components: {Home}
 
   }
