@@ -75,7 +75,7 @@
           }
         }
       }
-      xmlhttp.open("GET", "static/mock/getVote.json", true);
+      xmlhttp.open("GET", "./static/mock/getVote.json", true);
       xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlhttp.send();
 

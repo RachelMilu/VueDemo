@@ -1,0 +1,10 @@
+{
+    "result":{
+        "qrCodeUrl":"http://localhost:8080/static/img/qrcode.png",
+        "code":"999999"
+    },
+    "status":{
+        "code":0,
+        "msg":"success"
+    }
+}

@@ -20,5 +20,6 @@ refs
 *.coffee~
 *.css~
 *.less~
+*.iml
 
 
